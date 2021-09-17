@@ -1,11 +1,9 @@
 package com.jiawa.wiki.controller;
 
-import com.jiawa.wiki.domain.Demo;
-import com.jiawa.wiki.service.DemoService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
+import com.jiawa.wiki.domain.Ebook;
+import com.jiawa.wiki.resp.CommonResp;
+import com.jiawa.wiki.service.EbookService;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,15 +16,19 @@ import java.util.List;
  * @Date 2021/9/16 21:11
  */
 @RestController
-@RequestMapping("/demo")
-public class DemoController {
+@RequestMapping("/ebook")
+public class EbookController {
 
    @Resource
-    private DemoService demoService;
+    private EbookService ebookService;
 
     @GetMapping("/list")
-    public List<Demo> list(){
-        return demoService.list();
+    public CommonResp list(){
+        CommonResp<List<Ebook>> resp = new CommonResp<>();
+        List<Ebook> list = ebookService.list();
+        resp.setContent(list);
+
+        return resp;
     }
 
 }
