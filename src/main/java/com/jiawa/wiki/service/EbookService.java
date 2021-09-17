@@ -38,7 +38,6 @@ public class EbookService {
 //        }
         //列表复制
         List<EbookResp> list = CopyUtil.copyList(ebookList, EbookResp.class);
-
         return list;
 
 
