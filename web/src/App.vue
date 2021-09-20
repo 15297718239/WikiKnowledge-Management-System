@@ -59,37 +59,32 @@
           </a-sub-menu>
         </a-menu>
       </a-layout-sider>
-      <a-layout-content
-          :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }"
-      >
-        Content
-      </a-layout-content>
+
+
+        <a-layout-content
+            :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }"
+        >
+          Content
+        </a-layout-content>
+
     </a-layout>
-    <a-layout-footer style="text-align: center">
-      Ant Design ©2018 Created by Ant UED
-    </a-layout-footer>
   </a-layout>
 </template>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+#components-layout-demo-top-side-2 .logo {
+  float: left;
+  width: 120px;
+  height: 31px;
+  margin: 16px 24px 16px 0;
+  background: rgba(255, 255, 255, 0.3);
 }
 
-#nav {
-  padding: 30px;
+.ant-row-rtl #components-layout-demo-top-side-2 .logo {
+  float: right;
+  margin: 16px 0 16px 24px;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.site-layout-background {
+  background: #fff;
 }
 </style>
