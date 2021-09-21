@@ -30,7 +30,6 @@ import javax.servlet.http.HttpServletResponse;
          LOG.info("------------- LogInterceptor 开始 -------------");
          LOG.info("请求地址: {} {}", request.getRequestURL().toString(), request.getMethod());
          LOG.info("远程地址: {}", request.getRemoteAddr());
-
          long startTime = System.currentTimeMillis();
          request.setAttribute("requestStartTime", startTime);
          return true;
